@@ -1,4 +1,4 @@
-def bitonic_merge_sort(collection):
+def bitonic_merge_sort(collection: list):
 
     def sort_phase(ascending: bool, collection: list):
 
@@ -17,15 +17,15 @@ def bitonic_merge_sort(collection):
             return collection
         else:
             compare_n_swap(ascending, collection)
-            first = merge_phase(ascending, collection[:len(collection) // 2])
-            second = merge_phase(ascending, collection[len(collection) // 2:])
-            return first + second
+            first_slice = merge_phase(ascending, collection[:len(collection) // 2])
+            second_slice = merge_phase(ascending, collection[len(collection) // 2:])
+            return first_slice + second_slice
 
     def compare_n_swap(ascending: bool, collection):
 
         distance = len(collection) // 2
         for i in range(distance):
             if (collection[i] > collection[i + distance]) == ascending:
-                collection[i], collection[i +distance] = collection[i + distance], collection[i]
+                collection[i], collection[i + distance] = collection[i + distance], collection[i]
 
     return sort_phase(True, collection)
