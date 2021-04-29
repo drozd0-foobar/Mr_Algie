@@ -44,7 +44,7 @@ def bitonic_merge_sort(collection):
     return sort_phase(True, collection)
 
 
-arr = [random.randint(0, 10) for i in range(pow(2, 3))]
+arr = [random.randint(0, 10) for i in range(pow(2, 2))]
 print(arr)
 sorted_arr = bitonic_merge_sort(arr)
 print(sorted_arr)
