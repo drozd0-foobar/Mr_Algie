@@ -1,5 +1,6 @@
 import random
 
+''' Reprezentativní vzorek: hodnoty v listu fungují jako identifikátory rekursivních funkcí '''
 
 def bitonic_merge_sort(collection):
 
@@ -21,7 +22,7 @@ def bitonic_merge_sort(collection):
         print("MERGING... ->", collection)
 
         if len(collection) == 1:
-            print("MERGE FINISHED -> (END OF RECURSION): ", collection)
+            print("NOTHING TO MERGE (END OF RECURSION): ", collection)
             return collection
         else:
             compare_n_swap(ascending, collection)
@@ -35,16 +36,16 @@ def bitonic_merge_sort(collection):
 
         distance = len(collection) // 2
         for i in range(distance):
-            print(f"COMPARING:({i} with {i+distance})...")
+            print(f"COMPARING INDEXES:({i} with {i+distance})... ", collection)
             if (collection[i] > collection[i + distance]) == ascending:
                 collection[i], collection[i +
                                           distance] = collection[i + distance], collection[i]
-                print(f"SWAPPED({i} with {i+distance}): ", collection)
-            print("COMPARED.")
+                print(f"SWAPPED INDEXES ({i} with {i+distance}): ", collection)
+            print("COMPARED. ", collection)
     return sort_phase(True, collection)
 
 
-arr = [random.randint(0, 10) for i in range(pow(2, 2))]
-print(arr)
-sorted_arr = bitonic_merge_sort(arr)
-print(sorted_arr)
+# arr = [random.randint(0, 10) for i in range(pow(2, 2))]
+arr = [2,3,0,1]
+bitonic_merge_sort(arr)
+
