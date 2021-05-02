@@ -22,7 +22,7 @@ def bitonic_merge_sort(collection):
         print("MERGING... ->", collection)
 
         if len(collection) == 1:
-            print("NOTHING TO MERGE (END OF RECURSION): ", collection)
+            print("NOMORE TO MERGE (END OF RECURSION): ", collection)
             return collection
         else:
             compare_n_swap(ascending, collection)
