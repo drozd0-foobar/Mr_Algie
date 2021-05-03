@@ -6,6 +6,7 @@ Mr_Algie
 
 ### Time complexity
 ![Chart](https://i.ibb.co/NKnhWHy/chart.png)
+#### Časová složitost odpovídá teoretickým hodnotám. Na chartu je vidět, jak časová náročnost sortu exponeciálně roste společně s exponenciálním růstem množství hodnot. Odchylka od n tak tvoří právě~ **O( log^{2}(n) )**.
 |Case|Time|Method|
 |---------------------------|--------------------------|-------------------|
 |Worst-case performance|         **O( log^{2}(n) )**|     _parallel time_|
