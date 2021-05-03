@@ -46,6 +46,6 @@ def bitonic_merge_sort(collection):
 
 
 # arr = [random.randint(0, 10) for i in range(pow(2, 2))]
-arr = [2,3,0,1]
+arr = [2, 3, 0, 1, 4, 5, 6, 7, 8]
 bitonic_merge_sort(arr)
 
